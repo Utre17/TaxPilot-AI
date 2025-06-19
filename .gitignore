@@ -1,0 +1,58 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Next.js
+.next/
+out/
+*.log
+*.cache
+.env.local
+.env.*.local
+.env
+.next/cache/
+
+# Cursor / VS Code / JetBrains
+.vscode/
+.idea/
+.cursor/
+.remember/
+.clerk/
+.tmp/
+*.mdc
+*.md~*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# Build
+dist/
+build/
+
+# Runtime
+*.pid
+*.seed
+*.pid.lock
+
+# Stripe CLI / Executables
+stripe_*
+*.exe
+
+# Optional: GitHub Codespaces
+.devcontainer/
+
+# Optional: Test coverage
+coverage/
+
+# Markdown temp or export files
+*.md.bak

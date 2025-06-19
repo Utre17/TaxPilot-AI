@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+</head>
+<body>
+    <h1>TaxPilot AI API Test</h1>
+    <button onclick="testAPI()">Test Analyze API</button>
+    <div id="result"></div>
+
+    <script>
+        async function testAPI() {
+            const testData = {
+                name: "Test Company",
+                legalForm: "GmbH",
+                canton: "ZH",
+                revenue: 1200000,
+                profit: 240000,
+                employees: 8,
+                industry: "Technology",
+                vatRegistered: true
+            };
+
+            try {
+                document.getElementById('result').innerHTML = 'Testing...';
+                
+                const response = await fetch('http://localhost:3001/api/calculator/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(testData),
+                });
+
+                console.log('Response status:', response.status);
+                const result = await response.text();
+                console.log('Response:', result);
+                
+                document.getElementById('result').innerHTML = `
+                    <h3>Status: ${response.status}</h3>
+                    <pre>${result}</pre>
+                `;
+
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('result').innerHTML = `Error: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html> 
