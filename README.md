@@ -198,3 +198,4 @@ src/
 **Built with Swiss precision for Swiss businesses.** 🇨🇭
 
 For questions or support, contact: hello@taxpilot.ai "# TaxPilot-AI" 
+"# TaxPilot-AI" 
